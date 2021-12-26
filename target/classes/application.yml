@@ -1,0 +1,18 @@
+project:
+  name: ParkingTicket
+  version: 0.0.1.ALPHA-RELEASE
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ParkingTicket
+
+app:
+  language: tr
+  error-messages:
+    default:
+      9999: '{0}'
+    tr:
+      5500: 'Beklenmeyen bir hata oluştu, lütfen tekrar deneyiniz'
+
