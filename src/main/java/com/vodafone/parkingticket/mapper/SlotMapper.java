@@ -26,7 +26,7 @@ public interface SlotMapper {
     }
 
     default List<Integer> getOccupiedSlots(Integer initial, Integer last){
-        return IntStream.rangeClosed(initial, last)
+        return IntStream.range(initial, last)
                 .boxed().collect(Collectors.toList());
     }
 
