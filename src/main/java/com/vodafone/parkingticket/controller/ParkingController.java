@@ -12,8 +12,10 @@ import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.List;
 
+import static com.vodafone.parkingticket.constant.ApiConstants.API_PREFIX;
+
 @RestController
-@RequestMapping("/parking")
+@RequestMapping(API_PREFIX + "/parking")
 @RequestScope
 @RequiredArgsConstructor
 public class ParkingController {

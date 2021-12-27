@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static com.vodafone.parkingticket.constant.ApiConstants.API_PREFIX;
+
 @RestController
-@RequestMapping(value = "/test")
+@RequestMapping(API_PREFIX + "/test")
 public class TestController {
 
     @GetMapping
