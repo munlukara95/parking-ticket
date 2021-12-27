@@ -15,4 +15,5 @@ app:
       9999: '{0}'
     tr:
       5500: 'Beklenmeyen bir hata oluştu, lütfen tekrar deneyiniz'
+      4452: 'Araç tipi bulunamadı!'
 
