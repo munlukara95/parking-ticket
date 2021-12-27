@@ -8,6 +8,12 @@ spring:
   application:
     name: ParkingTicket
 
+logging:
+  file:
+    name: ${user.home}/log/parking-ticket/parking-ticket.log
+  level:
+    web: ${LOG_LEVEL:INFO}
+
 app:
   language: tr
   error-messages:
