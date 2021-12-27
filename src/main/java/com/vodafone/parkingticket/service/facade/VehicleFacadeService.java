@@ -34,11 +34,11 @@ public class VehicleFacadeService extends AbstractFacadeService {
 
     public List<VehicleStatusResponseDto> getStatus(){
         List<VehicleStatusResponseDto> statusDtos = null;
-        long stamp = stampedLock.tryOptimisticRead();
-        try{
+        long stamp = stampedLock.readLock();
+        try {
             statusDtos = slotMapper.toVehicleStatusResponseDto(GarageManagingService.getStatusOfSlots());
-        }finally {
-            stampedLock.unlock(stamp);
+        } finally {
+            stampedLock.unlockRead(stamp);
         }
         return statusDtos;
     }
