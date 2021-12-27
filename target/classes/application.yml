@@ -15,5 +15,6 @@ app:
       9999: '{0}'
     tr:
       5500: 'Beklenmeyen bir hata oluştu, lütfen tekrar deneyiniz'
+      5501: 'Garajda işlem yapılamamaktadır, garaj doludur'
       4452: 'Araç tipi bulunamadı!'
 
