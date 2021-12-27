@@ -18,6 +18,7 @@ public interface SlotMapper {
 
     default VehicleStatusResponseDto toVehicleStatusResponseDto(Slot slot){
         VehicleStatusResponseDto vehicleStatusResponseDto = new VehicleStatusResponseDto();
+        vehicleStatusResponseDto.setVehicleId(slot.getVehicle().getVehicleId());
         vehicleStatusResponseDto.setColorOfVehicle(slot.getVehicle().getColorOfVehicle());
         vehicleStatusResponseDto.setPlate(slot.getVehicle().getPlate());
         List<Integer> occupiedSlots = getOccupiedSlots(slot.getOccupiedInitialSlotIndex(), slot.getOccupiedLastSlotIndex());

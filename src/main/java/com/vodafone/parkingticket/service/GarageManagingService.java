@@ -7,8 +7,10 @@ import com.vodafone.parkingticket.exception.ResultStatus;
 import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class GarageManagingService {
     private static final List<Slot> SLOTS = new ArrayList<>(5);
@@ -30,7 +32,11 @@ public class GarageManagingService {
     }
 
     public static void leavingVehicle(Integer vehicleId){
-        SLOTS.remove(vehicleId);
+        Optional<Slot> slotOptional = SLOTS.stream().filter(slot -> slot.getOccupiedInitialSlotIndex().equals(vehicleId)).findFirst();
+        if(slotOptional.isPresent()){
+            Slot willRemoveSlot = slotOptional.get();
+            SLOTS.remove(willRemoveSlot);
+        }
     }
 
     public static List<Slot> getStatusOfSlots(){
@@ -39,32 +45,40 @@ public class GarageManagingService {
 
     private static Integer findPotentialFitSlot(Vehicle vehicle){
         Integer firstIndex = 0;
+        List<Slot> safeCopiedSlots = SLOTS.stream().sorted(Comparator.comparingInt(Slot::getOccupiedInitialSlotIndex)).collect(Collectors.toList());
 
-        if(SLOTS.size() != 1) {
-            for (int index = 0; index < SLOTS.size() - 1; index++) {
-                Slot currentSlot = SLOTS.get(index);
-                Slot nextSlot = SLOTS.get(index + 1);
+        if(safeCopiedSlots.get(0).getOccupiedInitialSlotIndex() != 0){
+            Slot slot = Slot.builder().occupiedLastSlotIndex(0).build();
+            safeCopiedSlots.add(0, slot);
+        }
 
-                if(Objects.nonNull(nextSlot)) {
-                    int distance = findDistanceBetweenSlots(currentSlot, nextSlot);
 
-                    if (distance == 0 || distance != vehicle.getOccupiedNumberOfSlots() + SLOT_GAP) {
-                        continue;
-                    } else if (distance == vehicle.getOccupiedNumberOfSlots() + SLOT_GAP) {
-                        firstIndex = currentSlot.getOccupiedLastSlotIndex();
-                        break;
-                    }
-                } else {
-                    if(currentSlot.getOccupiedLastSlotIndex() == 10) throw new GarageOperationException(ResultStatus.GARAGE_FULL.getStatus());
+        if(safeCopiedSlots.size() > 1) {
+            for (int index = 0; index < safeCopiedSlots.size() - 1; index++) {
+                Slot currentSlot = safeCopiedSlots.get(index);
+                Slot nextSlot = safeCopiedSlots.get(index + 1);
+
+                int distance = findDistanceBetweenSlots(currentSlot, nextSlot);
+                Integer occupiedNumberOfSlotsWithGap = getOccupiedNumberOfSlotsWithGap(vehicle);
+
+                if (distance == 0 || distance != occupiedNumberOfSlotsWithGap) {
+                    firstIndex = nextSlot.getOccupiedLastSlotIndex();
+                }
+                if (distance == occupiedNumberOfSlotsWithGap) {
                     firstIndex = currentSlot.getOccupiedLastSlotIndex();
                     break;
                 }
+                if(nextSlot.getOccupiedLastSlotIndex() == 10 || nextSlot.getOccupiedLastSlotIndex() + occupiedNumberOfSlotsWithGap > 10 ) throw new GarageOperationException(ResultStatus.GARAGE_FULL.getStatus());
             }
         } else {
-            firstIndex = SLOTS.get(0).getOccupiedLastSlotIndex();
+            firstIndex = safeCopiedSlots.get(0).getOccupiedLastSlotIndex();
         }
 
         return firstIndex;
+    }
+
+    private static Integer getOccupiedNumberOfSlotsWithGap(Vehicle vehicle){
+        return vehicle.getOccupiedNumberOfSlots() + SLOT_GAP;
     }
 
     private static Integer findDistanceBetweenSlots(Slot firstSlot, Slot secondSlot){

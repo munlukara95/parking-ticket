@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 public class VehicleStatusResponseDto {
+    private Integer vehicleId;
     private String plate;
     private String colorOfVehicle;
     private List<Integer> occupiedSlots = new ArrayList<>();
