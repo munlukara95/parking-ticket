@@ -147,8 +147,6 @@ r
 B.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml,f/4/f4fa5985540b58eb276c5f025fe175fde76e9a09
 u
 Esrc/main/java/com/vodafone/parkingticket/exception/ErrorResponse.java,6/d/6dfddf96d1dc0a4fe4dadcfccfbb9b378a47ff44
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 Ü
 Vsrc/main/java/com/vodafone/parkingticket/exception/handler/CustomExceptionHandler.java,c/c/cc34da0b5ca417f409c099f6f9a559e0c3dabc6f
 ç
