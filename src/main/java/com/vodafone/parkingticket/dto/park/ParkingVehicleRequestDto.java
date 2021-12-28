@@ -1,15 +1,20 @@
 package com.vodafone.parkingticket.dto.park;
 
 import com.vodafone.parkingticket.type.VehicleType;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NonNull;
+import lombok.NoArgsConstructor;
+
+import javax.validation.constraints.NotNull;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ParkingVehicleRequestDto {
-    @NonNull
+    @NotNull
     private String plate;
-    @NonNull
+    @NotNull
     private String colorOfVehicle;
-    @NonNull
+    @NotNull
     private VehicleType vehicleType;
 }

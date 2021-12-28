@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
 
+import javax.validation.Valid;
 import java.util.List;
 
 import static com.vodafone.parkingticket.constant.ApiConstants.API_PREFIX;
@@ -23,7 +24,7 @@ public class ParkingController {
     private final VehicleFacadeService vehicleFacadeService;
 
     @PostMapping("/park")
-    public ResponseEntity<ParkingVehicleResponseDto> parkingVehicle(@RequestBody ParkingVehicleRequestDto parkingVehicleRequestDto){
+    public ResponseEntity<ParkingVehicleResponseDto> parkingVehicle(@RequestBody @Valid ParkingVehicleRequestDto parkingVehicleRequestDto){
         ParkingVehicleResponseDto parkingVehicleResponseDto = vehicleFacadeService.parkingVehicle(parkingVehicleRequestDto);
         return ResponseEntity.ok(parkingVehicleResponseDto);
     }
