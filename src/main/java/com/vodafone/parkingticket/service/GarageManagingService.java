@@ -100,4 +100,8 @@ public class GarageManagingService {
                 .vehicle(vehicle)
                 .build();
     }
+
+    public static void forceAllVehicleLeaveFromGarage(){
+        SLOTS.clear();
+    }
 }
