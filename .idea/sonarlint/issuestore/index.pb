@@ -142,14 +142,8 @@ B.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml,f/4/f4fa598
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 Ä
 Psrc/main/java/com/vodafone/parkingticket/exception/UnExpectedErrorException.java,9/0/9040c2bd7f86d488c66bed1da549379424e240e6
-t
-Dsrc/main/java/com/vodafone/parkingticket/exception/ResultStatus.java,b/c/bcd743045003061acb69798c603f8ff6d1b0a2bb
 n
 >src/main/java/com/vodafone/parkingticket/type/VehicleType.java,7/9/7928577da8e31af0a327c0caf58529bb6a206882
-g
-7src/main/java/com/vodafone/parkingticket/data/Slot.java,8/f/8fb60b9bf34be421f984f2e36ef4c1838a90f923
-j
-:src/main/java/com/vodafone/parkingticket/data/Vehicle.java,8/7/8741adebe3fdd0f1421007f60015ce69c574246e
 Ä
 Psrc/main/java/com/vodafone/parkingticket/exception/GarageOperationException.java,7/f/7f47997485f87b43ba996c5b31846d8d3f4b50f8
 r
@@ -164,14 +158,10 @@ Tsrc/main/java/com/vodafone/parkingticket/service/impl/JeepVehicleParkingService
 Rsrc/main/java/com/vodafone/parkingticket/service/facade/AbstractFacadeService.java,9/e/9edc80308e2749c09867ff736ce67e2cb460f1fe
 Ö
 Usrc/main/java/com/vodafone/parkingticket/service/impl/TruckVehicleParkingService.java,f/a/fa2bbf61a2c2886664003fcb1e9f6e54589adc16
-{
-Ksrc/main/java/com/vodafone/parkingticket/service/GarageManagingService.java,3/b/3bb1183e9e49f139cdb4f2bfc8c47086b648541e
 o
 ?src/main/java/com/vodafone/parkingticket/mapper/SlotMapper.java,5/6/56b1c7721b18451e249fad9373ecd6153b84c90a
 É
 Ssrc/main/java/com/vodafone/parkingticket/service/impl/CarVehicleParkingService.java,b/7/b7cb564395ca40d57642c91078c444abbc8b0a73
-Å
-Qsrc/main/java/com/vodafone/parkingticket/service/facade/VehicleFacadeService.java,f/f/ffc6d37a7905197ca5013778643d55d09eebba93
 q
 Asrc/main/java/com/vodafone/parkingticket/config/FilterConfig.java,5/7/571fd9ee52b423640388375b2892b84cda0e09aa
 
@@ -184,7 +174,3 @@ t
 Dsrc/main/java/com/vodafone/parkingticket/config/SpringFoxConfig.java,9/6/964b5fdfb43c74fbe134d7519a8192845ac3c73c
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-Ä
-Psrc/main/java/com/vodafone/parkingticket/dto/park/ParkingVehicleResponseDto.java,6/0/60503033666f0672ccc51ba01196125becc2d174
-z
-Jsrc/main/java/com/vodafone/parkingticket/dto/VehicleStatusResponseDto.java,6/9/692f713b20d6ca9c095c7e05a5bef675eaa9c225

@@ -3,6 +3,7 @@ package com.vodafone.parkingticket.service;
 import com.vodafone.parkingticket.data.Slot;
 import com.vodafone.parkingticket.data.Vehicle;
 import com.vodafone.parkingticket.exception.GarageOperationException;
+import com.vodafone.parkingticket.exception.NotFoundException;
 import com.vodafone.parkingticket.exception.ResultStatus;
 import org.springframework.util.ObjectUtils;
 
@@ -36,6 +37,8 @@ public class GarageManagingService {
         if(slotOptional.isPresent()){
             Slot willRemoveSlot = slotOptional.get();
             SLOTS.remove(willRemoveSlot);
+        } else {
+            throw new NotFoundException(ResultStatus.VEHICLE_ID_NOT_FOUND.getStatus());
         }
     }
 
