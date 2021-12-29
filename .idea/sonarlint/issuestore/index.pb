@@ -1,12 +1,6 @@
 
 x
-Hsrc/main/java/com/vodafone/parkingticket/exception/handler/Handlers.java,1/7/17de521c77b06be750b7ea569715eef6af2e3063
-v
-Fsrc/main/java/com/vodafone/parkingticket/exception/util/ErrorUtil.java,6/c/6c72435af93142f896db59e1956db9b057c997b8
-x
 Hsrc/main/java/com/vodafone/parkingticket/exception/util/MessageUtil.java,d/7/d78cca368817f3dcdd1d5a022aedb0608ec6b895
-
-Qsrc/main/java/com/vodafone/parkingticket/exception/advisor/ControllerAdvisor.java,1/5/1507a91c2dc455ba34d1bf97c82539e0d547afe5
 8
 mvnw.cmd,1/f/1f1763f358c257ea3515417352b82b0165647ad1
 4
@@ -143,14 +137,6 @@ q
 A.idea/libraries/Maven__org_springframework_spring_core_5_3_14.xml,b/a/ba56996984c2da72b84037552f98f74ae7e23a92
 r
 B.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_0_0.xml,f/4/f4fa5985540b58eb276c5f025fe175fde76e9a09
-u
-Esrc/main/java/com/vodafone/parkingticket/exception/ErrorResponse.java,6/d/6dfddf96d1dc0a4fe4dadcfccfbb9b378a47ff44
-†
-Vsrc/main/java/com/vodafone/parkingticket/exception/handler/CustomExceptionHandler.java,c/c/cc34da0b5ca417f409c099f6f9a559e0c3dabc6f
-
-]src/main/java/com/vodafone/parkingticket/exception/handler/CustomRuntimeExceptionHandler.java,8/7/87e7ce89750b58dba8e8848af3afe9040190fbe0
-†
-Vsrc/main/java/com/vodafone/parkingticket/exception/AbstractCustomRuntimeException.java,a/d/adde0864d8a04e6db258afc26ed121fa3a7303e9
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
@@ -170,8 +156,6 @@ r
 Bsrc/main/java/com/vodafone/parkingticket/mapper/VehicleMapper.java,5/1/51579292852f8371fbd2a5cef44c3013ee5d87d3
 y
 Isrc/main/java/com/vodafone/parkingticket/exception/NotFoundException.java,0/2/02bb85b8dcc69c4befa9e82e60ac1051bf7496e3
-o
-?src/main/java/com/vodafone/parkingticket/config/BeanConfig.java,2/4/247d9c7eec64b1c1aa2b6da10779a029e73a8753
 {
 Ksrc/main/java/com/vodafone/parkingticket/service/VehicleParkingService.java,3/f/3fcfa0e4c3f14909a3c44519bb0dd83c1db17460
 „
@@ -194,11 +178,13 @@ Asrc/main/java/com/vodafone/parkingticket/config/FilterConfig.java,5/7/571fd9ee
 Osrc/main/java/com/vodafone/parkingticket/filter/CacheRequestResponseFilter.java,6/9/69a4b0307a6639304f5b7b2e50a1bcd4e5cd3777
 s
 Csrc/main/java/com/vodafone/parkingticket/constant/ApiConstants.java,0/b/0b9f00ddb032c00f71c5382b3d9f599d7227d197
-n
->src/main/java/com/vodafone/parkingticket/config/MvcConfig.java,e/b/ebf37ac9a72fbf1ef9392bce833c276a50c8fcbb
 w
 Gsrc/main/java/com/vodafone/parkingticket/controller/TestController.java,0/7/07eb9f1d08684af9080fb7f18f16617ddaf78189
 t
 Dsrc/main/java/com/vodafone/parkingticket/config/SpringFoxConfig.java,9/6/964b5fdfb43c74fbe134d7519a8192845ac3c73c
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+€
+Psrc/main/java/com/vodafone/parkingticket/dto/park/ParkingVehicleResponseDto.java,6/0/60503033666f0672ccc51ba01196125becc2d174
+z
+Jsrc/main/java/com/vodafone/parkingticket/dto/VehicleStatusResponseDto.java,6/9/692f713b20d6ca9c095c7e05a5bef675eaa9c225
