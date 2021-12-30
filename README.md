@@ -13,3 +13,11 @@ Download and run wherever you go!
 
 This project uses Java 17 and Spring Boot 2.6.2 versions
 
+The following topics were covered in this project:
+
+* Exception Handling
+* Design pattern
+* Validation & Logging
+* Unit test
+* Thread safe development
+

@@ -162,5 +162,3 @@ w
 Gsrc/main/java/com/vodafone/parkingticket/controller/TestController.java,0/7/07eb9f1d08684af9080fb7f18f16617ddaf78189
 t
 Dsrc/main/java/com/vodafone/parkingticket/config/SpringFoxConfig.java,9/6/964b5fdfb43c74fbe134d7519a8192845ac3c73c
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
