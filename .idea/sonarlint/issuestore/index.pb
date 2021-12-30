@@ -152,10 +152,6 @@ y
 Isrc/main/java/com/vodafone/parkingticket/exception/NotFoundException.java,0/2/02bb85b8dcc69c4befa9e82e60ac1051bf7496e3
 {
 Ksrc/main/java/com/vodafone/parkingticket/service/VehicleParkingService.java,3/f/3fcfa0e4c3f14909a3c44519bb0dd83c1db17460
-‚
-Rsrc/main/java/com/vodafone/parkingticket/service/facade/AbstractFacadeService.java,9/e/9edc80308e2749c09867ff736ce67e2cb460f1fe
-o
-?src/main/java/com/vodafone/parkingticket/mapper/SlotMapper.java,5/6/56b1c7721b18451e249fad9373ecd6153b84c90a
 q
 Asrc/main/java/com/vodafone/parkingticket/config/FilterConfig.java,5/7/571fd9ee52b423640388375b2892b84cda0e09aa
 
