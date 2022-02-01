@@ -1,0 +1,33 @@
+name: Building, Testing and Auto Versioning
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: maven
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+      - name: Get Versioning Data
+        id: versioning
+        uses: Soumeh/Auto-Versioning@main
+      - name: Create Release
+        uses: meeDamian/github-release@2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: ${{ github.event.head_commit.message }}
+          tag: ${{ steps.versioning.outputs.tag }}
+          body: "${{ steps.versioning.outputs.changelog }}"
+          gzip: false
