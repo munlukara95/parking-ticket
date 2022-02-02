@@ -16,4 +16,9 @@ jobs:
       - name: Git Version
         uses: codacy/git-version@2.2.0
         with:
+          tool-version: latest
+          release-branch: master
+          dev-branch: dev
+          minor-identifier: "feature:"
+          major-identifier: "breaking:"
           prefix: v
