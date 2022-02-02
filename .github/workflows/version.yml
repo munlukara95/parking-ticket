@@ -11,12 +11,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
       - name: Logging
-        run: echo "${{ toJSON(github.event.commits) }}"
+        run: echo "${{ toJSON(github.event) }}"
       - name: Get Versioning Data
         id: versioning
         uses: Soumeh/Auto-Versioning@main
         with:
-          commits: ${{ toJSON(github.event.commits) }}
+          commits: ${{ github.event.commits }}
       - name: Create Release
         uses: meeDamian/github-release@2.0
         with:
