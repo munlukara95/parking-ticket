@@ -14,7 +14,7 @@ jobs:
         id: versioning
         uses: Soumeh/Auto-Versioning@main
         with:
-          commit: ${{ github.event.head_commit.message }}
+          commits: ${{ github.event.commits }}
       - name: Create Release
         uses: meeDamian/github-release@2.0
         with:
