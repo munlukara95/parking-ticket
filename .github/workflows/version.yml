@@ -3,21 +3,17 @@ on:
   workflow_run:
     workflows: ["Codacy Security Scan"]
     types: [completed]
-    branches: [master]
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Get Versioning Data
-        id: versioning
-        uses: Soumeh/Auto-Versioning@main
-      - name: Create Release
-        uses: meeDamian/github-release@2.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: ${{ steps.versioning.outputs.tag }}
-          tag: ${{ steps.versioning.outputs.tag }}
-          body: "${{ steps.versioning.outputs.changelog }}"
-          gzip: false
+          ref: ${{ github.head_ref }}   # checkout the correct branch name
+          fetch-depth: 0                # fetch the whole repo history
+
+      - name: Git Version
+        uses: codacy/git-version@2.2.0
+        with:
+          prefix: v
