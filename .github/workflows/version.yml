@@ -2,9 +2,8 @@ name: Auto Versioning
 on: 
   workflow_run:
     workflows: ["Codacy Security Scan"]
-    types:
-      - completed 
-    branches: [master]
+    types: ["completed"] 
+    branches: ["master"]
 jobs:
   build:
     runs-on: ubuntu-latest
