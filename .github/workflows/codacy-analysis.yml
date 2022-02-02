@@ -16,6 +16,10 @@ name: Codacy Security Scan
 on:
   push:
     branches: [ master ]
+  workflow_run:
+    workflows: ["Building and Testing"]
+    types:
+      - completed  
 
 jobs:
   codacy-security-scan:
