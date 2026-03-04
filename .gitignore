@@ -1,4 +1,4 @@
-target/
+target
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
@@ -26,7 +26,9 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
+build
 
 ### VS Code ###
-.vscode/
+.vscode
+
+logs
