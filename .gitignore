@@ -1,4 +1,4 @@
-target
+target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
@@ -15,7 +15,7 @@ target
 **/.DS_STORE
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -26,9 +26,9 @@ target
 /dist/
 /nbdist/
 /.nb-gradle/
-build
+build/
 
 ### VS Code ###
 .vscode
 
-logs
+logs/
